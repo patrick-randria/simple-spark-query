@@ -34,7 +34,7 @@ def normalize_words(line):
 # Initialize spark app
 conf = SparkConf().setMaster("local").setAppName("WordCount")
 sc = SparkContext(conf=conf)
-sc.setLogLevel("ERROR")
+sc.setLogLevel("WARN")
 sqlContext = sql.SQLContext(sc)
 spark = SparkSession(sc)
 
